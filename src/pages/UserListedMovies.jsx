@@ -7,7 +7,6 @@ import { onAuthStateChanged } from "firebase/auth";
 import { firebaseAuth } from "../utils/firebase-config";
 import { getUserLikedMovies } from "../store";
 import Card from "../components/Card";
-import NotAvailable from "../components/NotAvailable";
 
 const UserListedMovies = () => {
   const [isScrolled, setIsScrolled] = useState(false);
