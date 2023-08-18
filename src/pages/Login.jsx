@@ -27,7 +27,7 @@ const Login = () => {
     onAuthStateChanged(firebaseAuth, (currentUser) => {
       if (currentUser) navigate("/");
     });
-  }, []);
+  }, [navigate]);
 
   return (
     <Container>

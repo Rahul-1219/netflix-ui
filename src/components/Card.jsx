@@ -18,7 +18,6 @@ const Card = ({ movieData, isLiked = false }) => {
   const [email, setEmail] = useState(undefined);
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const [videoId, setVideoId] = useState("");
   const videoIds = useSelector((state) => state.netflix.videoIds);
 
   const [videoKey, setVideoKey] = useState("");
@@ -39,14 +38,6 @@ const Card = ({ movieData, isLiked = false }) => {
     } catch (error) {
       console.log(error);
     }
-  };
-
-  const opts = {
-    height: "140px",
-    width: "100%",
-    playerVars: {
-      autoplay: 1,
-    },
   };
 
   const handleHover = (movieData) => {
@@ -78,7 +69,7 @@ const Card = ({ movieData, isLiked = false }) => {
             <img
               src={`https://image.tmdb.org/t/p/w500${movieData.image}`}
               alt="card"
-              onClick={() => navigate(`/player/${videoId}`)}
+              onClick={() => navigate(`/player/${videoKey}`)}
             />
 
             <ReactPlayer

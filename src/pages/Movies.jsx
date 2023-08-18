@@ -13,7 +13,6 @@ const Movies = () => {
   const genresLoaded = useSelector((state) => state.netflix.genresLoaded);
   const movies = useSelector((state) => state.netflix.movies);
   const genres = useSelector((state) => state.netflix.genres);
-  const videoIds = useSelector((state) => state.netflix.videoIds);
 
   const dispatch = useDispatch();
 

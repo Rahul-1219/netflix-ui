@@ -4,7 +4,6 @@ import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchMovies, fetchVideoIds, getGenres } from "../store";
 import Slider from "../components/Slider";
-import NotAvailable from "../components/NotAvailable";
 import SelectGenre from "../components/SelectGenre";
 import { ImSpinner2 } from "react-icons/im";
 
@@ -13,7 +12,6 @@ const TVShows = () => {
   const genresLoaded = useSelector((state) => state.netflix.genresLoaded);
   const movies = useSelector((state) => state.netflix.movies);
   const genres = useSelector((state) => state.netflix.genres);
-  const videoIds = useSelector((state) => state.netflix.videoIds);
 
   const dispatch = useDispatch();
 

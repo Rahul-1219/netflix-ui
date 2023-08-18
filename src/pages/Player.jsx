@@ -6,13 +6,6 @@ import ReactPlayer from "react-player";
 const Player = () => {
   const navigate = useNavigate();
   const { videoKey } = useParams();
-  const opts = {
-    height: "450",
-    width: "800",
-    playerVars: {
-      autoplay: 1,
-    },
-  };
 
   return (
     <Container>

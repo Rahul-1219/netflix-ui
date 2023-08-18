@@ -31,7 +31,7 @@ const Signup = () => {
     onAuthStateChanged(firebaseAuth, (currentUser) => {
       if (currentUser) navigate("/");
     });
-  }, []);
+  }, [navigate]);
 
   return (
     <Container $showpassword={showPassword}>
