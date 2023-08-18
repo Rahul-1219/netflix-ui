@@ -6,6 +6,7 @@ import { fetchMovies, fetchVideoIds, getGenres } from "../store";
 import Slider from "../components/Slider";
 import SelectGenre from "../components/SelectGenre";
 import { ImSpinner2 } from "react-icons/im";
+import NotAvailable from "../components/NotAvailable";
 
 const TVShows = () => {
   const [isScrolled, setIsScrolled] = useState(false);
