@@ -7,6 +7,7 @@ import { firebaseAuth } from "../utils/firebase-config";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { useDispatch } from "react-redux";
 import { searchMovies } from "../store/index";
+import Dropdown from "./Dropdown";
 
 const Navbar = ({ isScrolled, type, inputIsChanged }) => {
   const links = [
@@ -17,9 +18,12 @@ const Navbar = ({ isScrolled, type, inputIsChanged }) => {
   ];
 
   const dispatch = useDispatch();
-  const [showSearch, setShowSearch] = useState(false);
-  const [inputHover, setInputHover] = useState(false);
-
+  const [showSearch, setShowSearch] = useState(
+    window.innerWidth <= 1180 || false
+  );
+  const [inputHover, setInputHover] = useState(
+    window.innerWidth <= 1180 || false
+  );
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -39,6 +43,7 @@ const Navbar = ({ isScrolled, type, inputIsChanged }) => {
         <div className="left flex a-center">
           <div className="brand flex a-center j-center">
             <img src={logo} alt="logo" />
+            <Dropdown links={links} />
           </div>
           <ul className="links flex">
             {links.map(({ name, link }) => {
@@ -66,7 +71,7 @@ const Navbar = ({ isScrolled, type, inputIsChanged }) => {
               onMouseEnter={() => setInputHover(true)}
               onMouseLeave={() => setInputHover(false)}
               onBlur={() => {
-                setShowSearch(false);
+                window.innerWidth >= 1180 && setShowSearch(false);
               }}
               onChange={handleSearch}
             />
@@ -102,6 +107,9 @@ const Container = styled.div`
       .brand {
         img {
           height: 4rem;
+        }
+        .dropdown-title {
+          display: none;
         }
       }
       .links {
@@ -163,6 +171,62 @@ const Container = styled.div`
           opacity: 1;
           visibility: visible;
           padding: 0.3rem;
+        }
+      }
+    }
+  }
+  @media (max-width: 1180px) {
+    nav {
+      .left {
+        .brand {
+          gap: 1rem;
+          .dropdown-title {
+            display: inline-block;
+          }
+        }
+        .right {
+          .search {
+            display: none;
+          }
+        }
+        .links {
+          display: none;
+        }
+      }
+    }
+  }
+  @media ((min-width: 320px) and (max-width: 767px)) {
+    nav {
+      padding: 0 1rem; /* Adjust the padding for smaller screens */
+      height: 5rem; /* Reduce the height for smaller screens */
+      .left {
+        gap: 1rem;
+        .brand {
+          img {
+            height: 3rem; /* Reduce the logo height for smaller screens */
+          }
+          .dropdown-title {
+            font-size: 1rem; /* Adjust the font size for the dropdown title */
+            text-align: center;
+          }
+        }
+        .links {
+          display: none;
+        }
+      }
+      .right {
+        gap: 0.7rem;
+        .search {
+          padding: 0.2rem;
+          padding-left: 0.3rem;
+          button {
+            svg {
+              font-size: 1rem; /* Adjust the icon size for smaller screens */
+            }
+          }
+          input {
+            padding: 0.1rem; /* Adjust the padding for the input field */
+          }
         }
       }
     }

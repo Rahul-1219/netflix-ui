@@ -95,33 +95,81 @@ const Container = styled.div`
     .form-container {
       gap: 2rem;
       height: 85vh;
+    }
+    .form {
+      padding: 2rem;
+      background-color: #000000b0;
+      width: 25vw;
+      gap: 2rem;
+      color: white;
+      h3 {
+        font-size: 1.5rem;
       }
-      .form {
-        padding: 2rem;
-        background-color: #000000b0;
-        width: 25vw;
+      .container {
         gap: 2rem;
-        color: white;
-        h3 {
-          font-size: 1.5rem;
+        input {
+          padding: 0.5rem 1rem;
+          width: 15rem;
         }
-        .container {
-          gap: 2rem;
-          input {
-            padding: 0.5rem 1rem;
-            width: 15rem;
-          }
-          button {
-            padding: 0.5rem 1rem;
-            background-color: #e50914;
-            border: none;
-            cursor: pointer;
-            color: white;
-            border-radius: 0.2rem;
-            font-weight: bolder;
-            font-size: 1.05rem;
-          }
+        button {
+          padding: 0.5rem 1rem;
+          background-color: #e50914;
+          border: none;
+          cursor: pointer;
+          color: white;
+          border-radius: 0.2rem;
+          font-weight: bolder;
+          font-size: 1.05rem;
         }
+      }
+    }
+  }
+  @media ((min-width: 1101px) and (max-width: 1320px)) {
+    .content {
+      .form {
+        width: 30vw;
+      }
+    }
+  }
+  @media ((min-width: 970px) and (max-width: 1100px)) {
+    .content {
+      .form {
+        width: 35vw;
+      }
+    }
+  }
+  @media ((min-width: 820px) and (max-width: 969px)) {
+    .content {
+      .form {
+        width: 40vw;
+      }
+    }
+  }
+  @media ((min-width: 710px) and (max-width: 819px)) {
+    .content {
+      .form {
+        width: 45vw;
+      }
+    }
+  }
+  @media ((min-width: 655px) and (max-width: 709px)) {
+    .content {
+      .form {
+        width: 50vw;
+      }
+    }
+  }
+  @media ((min-width: 481px) and (max-width: 655px)) {
+    .content {
+      .form {
+        width: 60vw;
+      }
+    }
+  }
+  @media ((min-width: 300px) and (max-width: 480px)) {
+    .content {
+      .form {
+        width: 80vw;
       }
     }
   }

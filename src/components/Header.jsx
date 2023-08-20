@@ -23,7 +23,7 @@ const Container = styled.div`
   padding: 0 4rem;
   .logo {
     img {
-      height: 5rem;
+      height: 4rem;
     }
   }
   button {
@@ -34,6 +34,9 @@ const Container = styled.div`
     color: white;
     border-radius: 0.2rem;
     font-weight: bolder;
-    font-size: 1.05rem;
+    font-size: 1.03rem;
+  }
+  @media (max-width: 690px) {
+    padding: 0 1rem;
   }
 `;

@@ -77,7 +77,11 @@ const Netflix = () => {
                 moviePoster?.original_name ||
                 moviePoster?.name}
             </h1>
-            <p>{moviePoster?.overview}</p>
+            <p>
+              {moviePoster?.overview
+                ? moviePoster.overview.substring(0, 100) + "..."
+                : ""}
+            </p>
           </div>
           <div className="buttons flex">
             <button
@@ -162,6 +166,85 @@ const Container = styled.div`
             color: white;
             svg {
               font-size: 1.8rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media ((min-width: 768px) and (max-width: 1180px)) {
+    .hero {
+      img {
+        height: 50vh;
+      }
+      .container {
+        bottom: 1rem;
+        margin-left: 2rem;
+        .logo {
+          h1 {
+            font-size: 2rem;
+            margin-left: 2rem;
+          }
+          p {
+            font-size: 0.8rem;
+            margin-left: 2rem;
+            margin-top: 0.3rem;
+          }
+        }
+        .buttons {
+          margin: 2rem;
+          margin-top: 2rem;
+          gap: 1rem;
+          button {
+            font-size: 1rem;
+            padding: 0.3rem;
+            padding-left: 1rem;
+            padding-right: 1.2rem;
+            &:nth-of-type(2) {
+              svg {
+                font-size: 1.4rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media ((min-width: 320px) and (max-width: 767px)) {
+    .hero {
+      img {
+        height: 40vh;
+      }
+      .container {
+        bottom: 1rem;
+        .logo {
+          h1 {
+            font-size: 1.5rem;
+            margin-left: 1.5rem;
+          }
+          p {
+            font-size: 0.7rem;
+            margin-left: 1.5rem;
+            margin-top: 0.2rem;
+            text-overflow: ellipsis;
+            max-width: 100%;
+          }
+        }
+        .buttons {
+          margin: 1rem;
+          margin-top: 0.5rem;
+          gap: 0.5rem;
+          button {
+            font-size: 0.9rem;
+            padding: 0.2rem;
+            padding-left: 0.8rem;
+            padding-right: 1rem;
+            margin-left: 0.5rem;
+            &:nth-of-type(2) {
+              svg {
+                font-size: 1rem;
+              }
             }
           }
         }

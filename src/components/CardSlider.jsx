@@ -97,4 +97,40 @@ const Container = styled.div`
       cursor: pointer;
     }
   }
+
+  @media (min-width: 320px) and (max-width: 767px) {
+    padding: 1rem 0; /* Adjust the padding for smaller screens */
+    h1 {
+      margin-left: 1rem; /* Adjust the margin for smaller screens */
+      font-size: 1.5rem; /* Adjust the font size for smaller screens */
+    }
+    .wrapper {
+      .slider {
+        margin-left: 1rem; /* Adjust the margin for smaller screens */
+      }
+      .slider-action {
+        top: 10px; /* Adjust the top position for smaller screens */
+        svg {
+          font-size: 1.5rem; /* Adjust the icon size for smaller screens */
+        }
+      }
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1180px) {
+    h1 {
+      font-size: 2rem; /* Adjust the font size for medium screens */
+    }
+    .wrapper {
+      .slider {
+        margin-left: 2rem; /* Adjust the margin for medium screens */
+      }
+      .slider-action {
+        top: 20px; /* Adjust the top position for medium screens */
+        svg {
+          font-size: 1.8rem; /* Adjust the icon size for medium screens */
+        }
+      }
+    }
+  }
 `;
