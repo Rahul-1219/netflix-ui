@@ -35,4 +35,9 @@ const Select = styled.select`
   &:focus {
     outline: none;
   }
+
+  @media ((min-width: 320px) and (max-width: 767px)) {
+    margin-left: 2rem;
+    font-size: 1rem;
+  }
 `;
