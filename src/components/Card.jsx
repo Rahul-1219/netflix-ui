@@ -204,9 +204,4 @@ const Container = styled.div`
       }
     }
   }
-
-  @media ((min-width: 320px) and (max-width: 767px)) {
-    max-width: 150px;
-    width: 150px;
-  }
 `;
