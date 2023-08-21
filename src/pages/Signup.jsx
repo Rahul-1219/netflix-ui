@@ -154,4 +154,116 @@ const Container = styled.div`
     font-weight: bolder;
     font-size: 1.05rem;
   }
+  @media ((min-width: 1025px ) and (max-width: 1200px)) {
+    .body {
+      h1 {
+        padding: 1rem 5rem;
+        font-size: 3.2rem;
+      }
+    }
+    .form {
+      width: 70%;
+    }
+  }
+  @media ((min-width: 777px) and (max-width: 1024px)) {
+    .body {
+      h1 {
+        padding: 1rem 2rem;
+        font-size: 3rem;
+      }
+    }
+    .form {
+      width: 70%;
+    }
+  }
+  @media ((min-width: 671px) and (max-width: 776px)) {
+    .body {
+      h1 {
+        padding: 1rem 2rem;
+        font-size: 2.8rem;
+      }
+      h4 {
+        font-size: 1.5rem;
+      }
+      h6 {
+        font-size: 1.2rem;
+        word-wrap: break-word;
+      }
+    }
+    .form {
+      display: inline-block;
+      width: 60%;
+      text-align: center;
+      input {
+        width: 100%;
+        margin-bottom: 0.2rem;
+        height: 3.5rem;
+      }
+      button {
+        width: 100%;
+        margin-top: 0.2rem;
+        height: 3.5rem;
+      }
+    }
+  }
+  @media ((min-width: 481px) and (max-width: 670px)) {
+    .body {
+      h1 {
+        padding: 1rem 2rem;
+        font-size: 2.5rem;
+      }
+      h4 {
+        font-size: 1.3rem;
+      }
+      h6 {
+        font-size: 1rem;
+        word-wrap: break-word;
+      }
+    }
+    .form {
+      display: inline-block;
+      width: 60%;
+      text-align: center;
+      input {
+        width: 100%;
+        margin-bottom: 0.2rem;
+        height: 3.5rem;
+      }
+      button {
+        width: 100%;
+        margin-top: 0.2rem;
+        height: 3.5rem;
+      }
+    }
+  }
+  @media ((min-width: 320px) and (max-width: 480px)) {
+    .body {
+      h1 {
+        padding: 1rem 2rem;
+        font-size: 2.5rem;
+      }
+      h4 {
+        font-size: 1.3rem;
+      }
+      h6 {
+        font-size: 1rem;
+        word-wrap: break-word;
+      }
+    }
+    .form {
+      display: inline-block;
+      width: 60%;
+      text-align: center;
+      input {
+        width: 100%;
+        margin-bottom: 0.2rem;
+        height: 3.5rem;
+      }
+      button {
+        width: 100%;
+        margin-top: 0.2rem;
+        height: 3.5rem;
+      }
+    }
+  }
 `;
