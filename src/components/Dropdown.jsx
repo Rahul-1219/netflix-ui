@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react"; // Import useRef and useState
+import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { FaAngleDown } from "react-icons/fa";
@@ -29,8 +29,6 @@ const Dropdown = ({ links }) => {
     </Container>
   );
 };
-
-// ... (Rest of your code)
 
 export default Dropdown;
 
